@@ -68,7 +68,7 @@ ctx.restore();}
 
 }
 }
-function sync(){$('contentHeading').textContent=format==='landscape'?'剧情内容':'图层';document.querySelectorAll('[data-fields]').forEach(el=>el.hidden=!el.dataset.fields.split(' ').includes(format));const c=crops[format];$('rotation').value=c.angle;$('rotationValue').value=c.angle+'°';$('zoom').value=c.zoom;$('zoomValue').value=Math.round(c.zoom*100)+'%';$('panX').value=c.x;$('panY').value=c.y;const {w,h}=formats[format];$('dimensions').textContent=`${w} × ${h} PX`;$('exportSize').textContent=`${$('exportFormat').value.toUpperCase()} · ${w} × ${h}`;document.querySelectorAll('[data-format]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.format===format)));render();}
+function sync(){$('contentHeading').textContent='图层';document.querySelectorAll('[data-fields]').forEach(el=>el.hidden=!el.dataset.fields.split(' ').includes(format));const c=crops[format];$('rotation').value=c.angle;$('rotationValue').value=c.angle+'°';$('zoom').value=c.zoom;$('zoomValue').value=Math.round(c.zoom*100)+'%';$('panX').value=c.x;$('panY').value=c.y;const {w,h}=formats[format];$('dimensions').textContent=`${w} × ${h} PX`;$('exportSize').textContent=`${$('exportFormat').value.toUpperCase()} · ${w} × ${h}`;document.querySelectorAll('[data-format]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.format===format)));render();}
 function status(message){$('status').textContent=message;}
 function setImportBusy(busy){for(const id of ['zoom','panX','panY','rotation','export'])$(id).disabled=busy||!source;$('pdfPage').disabled=busy;}
 function releasePdf(doc){if(doc)doc.destroy().catch(()=>{});}
