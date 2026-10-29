@@ -1,0 +1,6 @@
+PDF.js / pdfjs-dist 6.4.299
+Copyright Mozilla Foundation and contributors. Apache License 2.0.
+Source: https://github.com/mozilla/pdf.js
+Distribution: https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-6.4.299.tgz
+Changes: display module exported as a classic-script global for file:// use; unmodified worker and binary resources embedded as local JavaScript data.
+See PDFJS-LICENSE.txt and licenses/ for additional asset licenses.
